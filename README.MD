@@ -208,16 +208,7 @@
  - [ ] Document Analysis 
  - [ ] Code Generation 
  - [ ] Task Automation 
-  
- ## 🤝 Contributing 
-  
- We welcome contributions! Please see our contributing guidelines: 
-  
- 1. Fork the repository 
- 2. Create a feature branch 
- 3. Make your changes 
- 4. Add tests if applicable 
- 5. Submit a pull request 
+ 
   
  ## 📄 License 
   
@@ -230,18 +221,5 @@
  - Text-to-speech using pyttsx3 
  - Web interface built with Flask and Socket.IO 
  - UI design inspired by cyberpunk and futuristic themes 
-  
- ## 📞 Support 
-  
- If you encounter any issues or have questions: 
-  
- 1. Check the troubleshooting section 
- 2. Search existing issues on GitHub 
- 3. Create a new issue with detailed information 
- 4. Join our community discussions 
-  
- --- 
-  
- **Made with ❤️ for AI enthusiasts and Iron Man fans** 
   
  *"Sometimes you gotta run before you can walk." - Tony Stark*
