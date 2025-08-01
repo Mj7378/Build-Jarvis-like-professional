@@ -1,0 +1,14 @@
+# JARVIS AI Assistant Environment Variables
+# Copy this file to .env and fill in your API keys
+
+# OpenAI API Key (Optional - for advanced AI features)
+# Get your API key from: https://platform.openai.com/api-keys
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Weather API Key (Optional - for weather features)
+# Get your API key from: https://openweathermap.org/api
+WEATHER_API_KEY=your_weather_api_key_here
+
+# News API Key (Optional - for news features)
+# Get your API key from: https://newsapi.org/
+NEWS_API_KEY=your_news_api_key_here

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>JARVIS</h1>
+                <span class="subtitle">Just A Rather Very Intelligent System</span>
+            </div>
+            <div class="status-indicator">
+                <div class="status-light" id="statusLight"></div>
+                <span id="statusText">ONLINE</span>
+            </div>
+        </header>
+
+        <!-- Main Interface -->
+        <main class="main-interface">
+            <!-- System Status Panel -->
+            <div class="panel system-panel">
+                <h3><i class="fas fa-microchip"></i> SYSTEM STATUS</h3>
+                <div class="system-stats">
+                    <div class="stat">
+                        <span class="label">CPU:</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="cpuProgress"></div>
+                        </div>
+                        <span class="value" id="cpuValue">0%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">MEMORY:</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="memoryProgress"></div>
+                        </div>
+                        <span class="value" id="memoryValue">0%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">DISK:</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="diskProgress"></div>
+                        </div>
+                        <span class="value" id="diskValue">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="panel chat-panel">
+                <h3><i class="fas fa-comments"></i> COMMUNICATION</h3>
+                <div class="chat-container" id="chatContainer">
+                    <div class="message jarvis-message">
+                        <div class="message-content">
+                            <i class="fas fa-robot"></i>
+                            <span>Jarvis AI Assistant initialized. How may I assist you today, Sir?</span>
+                        </div>
+                        <div class="timestamp"></div>
+                    </div>
+                </div>
+
+                <div class="input-section">
+                    <div class="input-container">
+                        <input type="text" id="commandInput" placeholder="Enter command or ask a question..." autocomplete="off">
+                        <button id="sendBtn" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <button id="voiceBtn" class="voice-btn">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="panel actions-panel">
+                <h3><i class="fas fa-bolt"></i> QUICK ACTIONS</h3>
+                <div class="action-buttons">
+                    <button class="action-btn" data-command="what time is it">
+                        <i class="fas fa-clock"></i>
+                        <span>TIME</span>
+                    </button>
+                    <button class="action-btn" data-command="what date is today">
+                        <i class="fas fa-calendar"></i>
+                        <span>DATE</span>
+                    </button>
+                    <button class="action-btn" data-command="system status">
+                        <i class="fas fa-desktop"></i>
+                        <span>SYSTEM</span>
+                    </button>
+                    <button class="action-btn" data-command="calculate 2 + 2">
+                        <i class="fas fa-calculator"></i>
+                        <span>CALC</span>
+                    </button>
+                    <button class="action-btn" data-command="weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span>WEATHER</span>
+                    </button>
+                    <button class="action-btn" data-command="wikipedia artificial intelligence">
+                        <i class="fab fa-wikipedia-w"></i>
+                        <span>WIKI</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Audio Visualizer -->
+        <div class="audio-visualizer" id="audioVisualizer">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
